@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Education - Digital Skills & Financial Literacy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles adapted from the main landing page for consistency */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Slightly darker light gray for more contrast */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px; /* Space for the underline */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%; /* Wider underline */
+            height: 4px; /* Thicker underline */
+            background-color: #3b82f6; /* Blue underline */
+            border-radius: 9999px; /* Fully rounded */
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4); /* Glow effect */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0; /* Lighter track */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8; /* Grayish blue thumb */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b; /* Darker on hover */
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in { animation: fadeIn 1.5s ease-out forwards; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-2xl">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-blue-700 tracking-wide">Electron Volt Education</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Blog</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Shop</a>
+                <a href="#education-sections" class="text-blue-600 font-bold transition duration-300 transform hover:scale-105">Education</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-200">
+                <!-- Hamburger Icon -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Education Hero Section -->
+    <section class="bg-gradient-to-br from-blue-700 to-indigo-800 text-white py-24 md:py-32 text-center rounded-b-3xl shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zm0-30V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 30px 30px;"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Empower Your Future with Knowledge.
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in">
+                Unlock new opportunities with our comprehensive courses in digital skills and financial literacy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education Sections Container -->
+    <section id="education-sections" class="py-20 md:py-32 bg-gray-50 rounded-3xl shadow-xl mx-4 md:mx-auto my-16 max-w-7xl px-6 md:px-12 border border-blue-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 section-title mx-auto w-fit text-blue-800">Our Education Programs</h2>
+
+            <!-- Website Development Section -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center md:text-left">Website Development</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Introduction to HTML & CSS</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Learn the foundational languages for building beautiful and responsive web pages.</p>
+                        <a href="https://youtu.be/7g3Jk4AC9L4" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">JavaScript Fundamentals</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Master the basics of JavaScript to add interactivity and dynamic content to your websites.</p>
+                        <a href="https://youtu.be/7g3Jk4AC9L4" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Responsive Web Design</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Design websites that look great and function perfectly on any device, from mobile to desktop.</p>
+                        <a href="https://youtu.be/7g3Jk4AC9L4" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Computer and Digital Skills Section -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center md:text-left">Computer & Digital Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Digital Marketing Essentials</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Learn the core strategies of online marketing, including SEO, social media, and content creation.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Cybersecurity Basics</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Understand fundamental cybersecurity principles to protect yourself and your data online.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Data Analytics for Beginners</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">An introduction to collecting, cleaning, and interpreting data to make informed decisions.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Literacy Section -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center md:text-left">Financial Literacy & Trading</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Introduction to Forex Trading</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Understand the basics of foreign exchange markets and how to get started with currency trading.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Cryptocurrency Fundamentals</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Explore the world of digital currencies, blockchain technology, and how cryptocurrencies work.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Stock Market Investing for Beginners</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Learn the basics of stock market investing, from understanding shares to building a portfolio.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Section: Creative & Design Skills -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center md:text-left">Creative & Design Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Graphic Design Fundamentals</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Master the basics of visual communication, layout, and typography using industry-standard tools.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Video Editing for Content Creators</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Learn to edit engaging videos, add effects, and produce high-quality content for various platforms.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">UI/UX Design Principles</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Discover how to design user-friendly interfaces and engaging user experiences for web and mobile apps.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Section: Professional Development -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center md:text-left">Professional Development</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Project Management Basics</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Learn essential project management methodologies to plan, execute, and deliver successful projects.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Effective Communication Skills</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Enhance your verbal and written communication for better personal and professional interactions.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-blue-100 hover:border-blue-300">
+                        <h4 class="text-xl font-semibold mb-3 text-blue-800">Time Management & Productivity</h4>
+                        <p class="text-gray-600 text-base mb-5 leading-relaxed">Learn strategies to manage your time effectively, boost productivity, and achieve your goals.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium flex items-center">Start Course <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-blue-800 text-white py-20 md:py-28 text-center rounded-t-3xl shadow-2xl mx-4 md:mx-auto my-16 max-w-7xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zm0-30V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 30px 30px;"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 animate-fade-in-down">Ready to Learn and Grow?</h2>
+            <p class="text-lg md:text-xl mb-12 opacity-90 animate-fade-in">
+                Explore our full range of courses and start your journey towards digital and financial mastery.
+            </p>
+            <a href="#" class="bg-white text-blue-700 hover:bg-blue-100 px-10 py-5 rounded-full text-lg font-semibold shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border-2 border-white hover:border-blue-300">
+                View All Courses
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 rounded-t-2xl shadow-inner">
+        <div class="container mx-auto px-6 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-8 md:mb-0">
+                <h3 class="text-2xl font-extrabold text-white mb-3">Binary Education</h3>
+                <p class="text-gray-400">&copy; 2025 Binary. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-10 text-lg">
+                <a href="index.html" class="hover:text-white transition duration-300 transform hover:scale-105">Home</a>
+                <a href="#" class="hover:text-white transition duration-300 transform hover:scale-105">Blog</a>
+                <a href="#education-sections" class="hover:text-white transition duration-300 transform hover:scale-105">Education</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

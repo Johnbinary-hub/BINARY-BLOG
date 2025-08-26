@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINARY BLOG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles adapted from the main landing page for consistency */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Slightly darker light gray for more contrast */
+        }
+        
+        /* Corrected Hero Section Styles */ 
+        .hero-background {
+            /* This is the key change: we've added a semi-transparent gradient on top of the image */
+            /* This darkens the background, making the white text much more readable */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img.jpg"); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* Fallback color in case the image fails to load */
+            background-color: #3b82f6; /* A shade of blue */
+            
+            /* Tailwind-like classes for padding, flex, etc. can be added here or in the HTML */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white; /* White text for contrast */
+            padding: 8rem 2rem;
+            
+            /* A slightly more pronounced shadow for better definition on the dark background */
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8); 
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 4px;
+            background-color: #3b82f6;
+            border-radius: 9999px;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fade-in { animation: fadeIn 1.5s ease-out forwards; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-2xl">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-blue-700 tracking-wide">BINARY BLOG</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Home</a>
+                <a href="news section.html" class="text-blue-600 font-bold transition duration-300 transform hover:scale-105">News feeds</a>
+                <a href="education.html" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Education</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-200">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav> 
+    </header>
+
+    <section class="hero-background">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+            Your Gateway to the World of Crypto
+        </h2>
+        <p class="text-xl md:text-2xl mb-8">
+            Get the latest news, trends, and insights on Bitcoin, Ethereum, and beyond and also, this is a free space to learn more about crypto
+          <br>  Stay informed, stay ahead!
+        </p>
+        <a href="news section.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+            Explore Latest News
+        </a>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold text-gray-800 mb-12">Why Choose Binary updates?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="p-6 rounded-lg shadow-xl bg-gradient-to-br from-indigo-50 to-purple-50 transform hover:scale-105 transition duration-300">
+                    <div class="text-indigo-600 text-5xl mb-4">💡</div> <h4 class="text-2xl font-semibold text-gray-800 mb-3">Timely Updates</h4>
+                    <p class="text-gray-600">
+                        Never miss a beat with real-time news and market updates directly to your feed.
+                    </p>
+                </div>
+                <div class="p-6 rounded-lg shadow-xl bg-gradient-to-br from-indigo-50 to-purple-50 transform hover:scale-105 transition duration-300">
+                    <div class="text-indigo-600 text-5xl mb-4">💬</div> <h4 class="text-2xl font-semibold text-gray-800 mb-3">Community Posts</h4>
+                    <p class="text-gray-600">
+                        Share your own insights and engage with a vibrant community of crypto enthusiasts.
+                    </p>
+                </div>
+                <div class="p-6 rounded-lg shadow-xl bg-gradient-to-br from-indigo-50 to-purple-50 transform hover:scale-105 transition duration-300">
+                    <div class="text-indigo-600 text-5xl mb-4">📈</div> <h4 class="text-2xl font-semibold text-gray-800 mb-3">Easy to Use</h4>
+                    <p class="text-gray-600">
+                        A clean, intuitive interface designed for a seamless news Browse experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-indigo-700 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold mb-6">Ready to Dive In?</h3>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Join hundreds of users who are already getting their daily crypto news from Binary updates.
+            </p>
+            <a href="news section.html" class="inline-block bg-white text-indigo-700 hover:bg-gray-200 font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                View All News
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white p-6 text-center mt-auto shadow-inner">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Binary updates. All rights reserved.</p>
+            <p class="text-sm mt-2">
+                <a href="#" class="hover:text-indigo-300">Privacy Policy</a> |
+                <a href="#" class="hover:text-indigo-300">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
