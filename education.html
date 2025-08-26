@@ -1,62 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Binary Education - Digital Skills & Financial Literacy</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles adapted from the main landing page for consistency */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Slightly darker light gray for more contrast */
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 8px; /* Space for the underline */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 70%; /* Wider underline */
-            height: 4px; /* Thicker underline */
-            background-color: #3b82f6; /* Blue underline */
-            border-radius: 9999px; /* Fully rounded */
-            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4); /* Glow effect */
-        }
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #e2e8f0; /* Lighter track */
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8; /* Grayish blue thumb */
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #64748b; /* Darker on hover */
-        }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f0f4f8; }
+        .section-title { position: relative; display: inline-block; padding-bottom: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 70%; height: 4px; background-color: #3b82f6; border-radius: 9999px; box-shadow: 0 2px 8px rgba(59,130,246,0.4); }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+        /* Simple animations reused in the hero section */
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         .animate-fade-in { animation: fadeIn 1.5s ease-out forwards; }
     </style>
 </head>
@@ -66,17 +35,36 @@
     <header class="bg-white shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-2xl">
         <nav class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-3xl font-extrabold text-blue-700 tracking-wide">Electron Volt Education</a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Home</a>
                 <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Blog</a>
                 <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300 transform hover:scale-105 font-medium">Shop</a>
                 <a href="#education-sections" class="text-blue-600 font-bold transition duration-300 transform hover:scale-105">Education</a>
             </div>
-            <button class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-200">
-                <!-- Hamburger Icon -->
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn"
+                class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-200"
+                aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+             class="hidden md:hidden flex-col bg-white shadow-lg mt-4 mx-2 rounded-xl p-4 space-y-3 border border-gray-100"
+             role="menu" aria-labelledby="menu-btn">
+            <a href="index.html" class="block px-2 py-2 rounded-lg hover:bg-gray-50 text-gray-700">Home</a>
+            <a href="#" class="block px-2 py-2 rounded-lg hover:bg-gray-50 text-gray-700">Blog</a>
+            <a href="#" class="block px-2 py-2 rounded-lg hover:bg-gray-50 text-gray-700">Shop</a>
+            <a href="#education-sections" class="block px-2 py-2 rounded-lg hover:bg-gray-50 text-blue-700 font-semibold">Education</a>
+        </div>
     </header>
 
     <!-- Education Hero Section -->
@@ -163,7 +151,7 @@
                 </div>
             </div>
 
-            <!-- New Section: Creative & Design Skills -->
+            <!-- Creative & Design Skills -->
             <div class="mb-20">
                 <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center md:text-left">Creative & Design Skills</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -185,7 +173,7 @@
                 </div>
             </div>
 
-            <!-- New Section: Professional Development -->
+            <!-- Professional Development -->
             <div class="mb-20">
                 <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center md:text-left">Professional Development</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -238,5 +226,34 @@
         </div>
     </footer>
 
+    <!-- Mobile menu script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu(force) {
+            const willShow = typeof force === 'boolean' ? force : mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', !willShow);
+            menuBtn.setAttribute('aria-expanded', String(willShow));
+        }
+
+        menuBtn.addEventListener('click', () => toggleMenu());
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => toggleMenu(false));
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') toggleMenu(false);
+        });
+
+        // Close when clicking outside the menu (on mobile)
+        document.addEventListener('click', (e) => {
+            const clickedInside = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
+            if (!clickedInside) toggleMenu(false);
+        });
+    </script>
 </body>
 </html>
